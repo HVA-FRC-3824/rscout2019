@@ -1,0 +1,89 @@
+<PreferenceScreen xmlns:android = "http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title = "Match Scout">
+        <SwitchPreference
+            android:defaultValue = "false"
+            android:key = "enable_match_scout"
+            android:summary = "Whether this tablet is being used to scout matches"
+            android:title = "Enable" />
+
+        <ListPreference
+            android:entries = "@array/match_scout_position_titles"
+            android:entryValues = "@array/match_scout_position_values"
+            android:key = "match_scout_position"
+            android:summary = "Which position the match scout with this tablet will be viewing (Blue 1, Blue 2, etc)"
+            android:title = "Position" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="blue_left"
+            android:summary="Are the blue driver stations on your left"
+            android:title="Is blue left?"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title = "Pit Scout">
+        <SwitchPreference
+            android:defaultValue = "false"
+            android:key = "enable_pit_scout"
+            android:summary = "Whether this tablet is being used to scout team's pits"
+            android:title = "Enable" />
+
+        <ListPreference
+            android:entries = "@array/pit_scout_position_titles"
+            android:entryValues = "@array/pit_scout_position_values"
+            android:key = "pit_scout_position"
+            android:summary = "Which position the pit scout with this tablet will has"
+            android:title = "Position" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title = "Super Scout">
+        <SwitchPreference
+            android:defaultValue = "false"
+            android:key = "enable_super_scout"
+            android:summary = "Whether this tablet is being used to scout matches as a super scout"
+            android:title = "Enable" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title = "Strategist">
+        <SwitchPreference
+            android:defaultValue = "false"
+            android:key = "enable_strategist"
+            android:summary = "Whether this tablet is being used to by a strategist"
+            android:title = "Enable" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title = "Server">
+        <SwitchPreference
+            android:defaultValue = "false"
+            android:key = "enable_server"
+            android:summary = "Whether this tablet is connected and should send data to the server"
+            android:title = "Enable" />
+
+        <EditTextPreference
+            android:defaultValue = "127.0.0.1"
+            android:key = "server_ip"
+            android:summary = "The ip address used to connect to the server"
+            android:title = "IP" />
+
+        <EditTextPreference
+            android:defaultValue = "38240"
+            android:key = "server_port"
+            android:summary = "The port number used to connect to the server"
+            android:title = "Port" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title = "Admin">
+        <SwitchPreference
+            android:defaultValue = "false"
+            android:key = "enable_admin"
+            android:summary = "Whether this tablet is being used to by an admin"
+            android:title = "Enable" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title = "Event">
+        <EditTextPreference
+            android:key = "event_key"
+            android:summary = "The event key used by the blue alliance"
+            android:title = "Event Key" />
+    </PreferenceCategory>
+</PreferenceScreen>

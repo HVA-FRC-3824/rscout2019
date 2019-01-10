@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    android:background="@color/Black">
+    <TableRow>
+        <TextView
+            android:text="Fouls"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@color/White"/>
+        <TextView
+            android:text="Tech Fouls"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@color/White"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Tech Fouls"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:id="@+id/inner_fouls"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@color/White"/>
+        <TextView
+            android:text="Tech Fouls"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:id="@+id/inner_tech_fouls"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="@color/White"/>
+    </TableRow>
+</TableLayout>

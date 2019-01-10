@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="32dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:id="@+id/start_label"/>
+
+    <frc3824.rscout2018.views.powered_up.IndividualStartLocation
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_label"
+        android:id="@+id/location"/>
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="Start with Cube"
+        android:textColor="@color/Red"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_label"
+        android:id="@+id/cube"/>
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="Auto Cross"
+        android:textColor="@color/Red"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cube"
+        android:id="@+id/cross"/>
+
+</android.support.constraint.ConstraintLayout>

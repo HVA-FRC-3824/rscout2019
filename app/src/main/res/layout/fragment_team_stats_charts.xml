@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightSkyBlue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <frc3824.rscout2018.views.powered_up.StartView
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <frc3824.rscout2018.views.powered_up.CubesView
+            android:id="@+id/cubes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <frc3824.rscout2018.views.powered_up.ClimbView
+            android:id="@+id/climb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:background="@color/Black">
+            <TableRow>
+                <TextView
+                    android:text="Fouls"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:background="@color/White"/>
+                <TextView
+                    android:text="Tech Fouls"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:background="@color/White"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Tech Fouls"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:id="@+id/fouls"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:background="@color/White"/>
+                <TextView
+                    android:text="Tech Fouls"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:id="@+id/tech_fouls"
+                    android:layout_margin="4dp"
+                    android:padding="4dp"
+                    android:background="@color/White"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>

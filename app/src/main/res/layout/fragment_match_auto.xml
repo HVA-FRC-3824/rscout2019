@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="tmd"
+            type="frc3824.rscout2018.database.data_models.TeamMatchData"/>
+    </data>
+
+
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                  android:layout_width = "match_parent"
+                  android:layout_height = "match_parent"
+                  android:orientation = "vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <frc3824.rscout2018.views.SavableSwitch
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:bool="@{tmd.startedWithCube}"
+                app:boolAttrChanged="@{tmd.startedWithCubeListener}"
+                app:label="Started with Cube:"/>
+
+            <frc3824.rscout2018.views.SavableSwitch
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:bool="@{tmd.crossedAutoLine}"
+                app:boolAttrChanged="@{tmd.crossedAutoLineListener}"
+                app:label="Crossed Auto Line:"/>
+        </LinearLayout>
+
+        <frc3824.rscout2018.views.powered_up.SavableCubes
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:data="@{tmd}"
+            android:id="@+id/cubes"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:textSize="20sp"
+            android:textColor="@color/Black"
+            android:id="@+id/undo"/>
+
+    </LinearLayout>
+</layout>

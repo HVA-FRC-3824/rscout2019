@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="match_scout_position_titles">
+        <item>Blue 1</item>
+        <item>Blue 2</item>
+        <item>Blue 3</item>
+        <item>Red 1</item>
+        <item>Red 2</item>
+        <item>Red 3</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="match_scout_position_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="pit_scout_position_titles">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="pit_scout_position_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="programming_languages">
+        <item>Java</item>
+        <item>C++</item>
+        <item>Labview</item>
+        <item>Python</item>
+        <item>C#</item>
+    </string-array>
+
+    <string-array name="drive_trains">
+        <item>Tank</item>
+        <item>WCD (4 wheel)</item>
+        <item>WCD (6 wheel)</item>
+        <item>WCD (8 wheel)</item>
+        <item>Mecanum</item>
+        <item>Swerve</item>
+        <item>Kiwi</item>
+    </string-array>
+</resources>

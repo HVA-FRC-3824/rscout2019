@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/ColumbiaBlue"
+                                             tools:context="frc3824.rscout2018.activities.HomeActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="Logo for the app"
+        android:src="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="584dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif"
+        android:text="RScout 2018"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/Navy"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <TextView
+        android:id="@+id/event"
+        android:layout_width="584dp"
+        android:layout_height="wrap_content"
+        android:text="Event"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/version"/>
+
+    <TextView
+        android:id="@+id/scouting_label"
+        android:layout_width="584dp"
+        android:layout_height="wrap_content"
+        android:text="Scouting"
+        android:textAlignment="center"
+        android:textColor="@color/Navy"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"/>
+
+    <LinearLayout
+        android:id="@+id/scouting_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scouting_label">
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/match_scouting_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:text="Match"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/pit_scouting_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:text="Pit"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/super_scouting_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:text="Super"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/strategy_label"
+        android:layout_width="584dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Strategy"
+        android:textAlignment="center"
+        android:textColor="@color/Navy"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scouting_buttons"/>
+
+    <LinearLayout
+        android:id="@+id/strategy_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/strategy_label">
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/match_preview_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:text="Match\nPreview"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/team_stats_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:text="Team\nStats"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/event_charts_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:text="Event\nCharts"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/pick_list_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1"
+            android:text="Pick\nList"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+    </LinearLayout>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/settings_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Settings"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:fButtonColor="@color/Navy"
+        app:cornerRadius="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/strategy_buttons"
+        app:shadowColor="@color/Black"
+        app:shadowEnabled="true"
+        app:shadowHeight="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/settings_button"
+        android:id="@+id/admin_row_1">
+        <info.hoang8f.widget.FButton
+            android:id="@+id/ping_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Ping Server"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/pull_matches_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Pull Matches"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/pull_teams_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Pull Teams"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Update"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+        <info.hoang8f.widget.FButton
+            android:id="@+id/upload_match_data_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Upload Match Data"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+        <info.hoang8f.widget.FButton
+            android:id="@+id/upload_super_data_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Upload Super Data"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/admin_row_1"
+        android:id="@+id/admin_row_2">
+
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/upload_pit_data_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Upload Pit Data"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/upload_pictures_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Upload Pictures"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+        <info.hoang8f.widget.FButton
+        android:id="@+id/pull_pit_data_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:text="Pull Pit Data"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:fButtonColor="@color/Navy"
+        app:cornerRadius="5dp"
+        app:shadowColor="@color/Black"
+        app:shadowEnabled="true"
+        app:shadowHeight="5dp"/>
+        <info.hoang8f.widget.FButton
+            android:id="@+id/pull_pictures_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Pull Pictures"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+        <info.hoang8f.widget.FButton
+            android:id="@+id/pull_match_data_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Pull Match Data"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/admin_row_3">
+        <info.hoang8f.widget.FButton
+            android:id="@+id/generate_test_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Generate Test Data"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:fButtonColor="@color/Navy"
+            app:cornerRadius="5dp"
+            app:shadowColor="@color/Black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

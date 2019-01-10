@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name = "tpd"
+            type = "frc3824.rscout2018.database.data_models.TeamPitData" />
+    </data>
+
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                  xmlns:app = "http://schemas.android.com/apk/res-auto"
+                  android:layout_width = "match_parent"
+                  android:layout_height = "match_parent"
+                  android:orientation = "vertical">
+
+        <frc3824.rscout2018.views.SavableNumeric
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Robot Width (in):"
+            app:number = "@{tpd.robotWidth}"
+            app:numberAttrChanged="@{tpd.robotWidthListener}"/>
+
+        <frc3824.rscout2018.views.SavableNumeric
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Robot Length (in):"
+            app:number = "@{tpd.robotLength}"
+            app:numberAttrChanged="@{tpd.robotLengthListener}"/>
+
+        <frc3824.rscout2018.views.SavableNumeric
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Robot Height (in):"
+            app:number = "@{tpd.robotHeight}"
+            app:numberAttrChanged="@{tpd.robotHeightListener}"/>
+
+        <frc3824.rscout2018.views.SavableNumeric
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Robot Weight (lbs):"
+            app:number = "@{tpd.robotWeight}"
+            app:numberAttrChanged="@{tpd.robotWeightListener}"/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cubes"
+        android:textSize="30sp"
+        android:textColor="@color/Black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/cubes_label"/>
+
+    <frc3824.rscout2018.views.powered_up.CubesInnerView
+        android:layout_width="700dp"
+        android:layout_height="350dp"
+        app:maxOpacity="255"
+        app:minOpacity="0"
+        app:radius="300dp"
+        app:layout_constraintTop_toBottomOf="@id/cubes_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/locations"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:id="@+id/options"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cubes_label">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auto_pickup"
+            android:text="Auto Picked Up"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auto_placed"
+            android:text="Auto Placed"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auto_dropped"
+            android:text="Auto Dropped"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        <!--
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auto_launch_success"
+            android:text="Auto Launch Success"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        -->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auto_launch_failure"
+            android:text="Auto Launch Failure"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teleop_pickup"
+            android:text="Teleop Picked Up"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teleop_placed"
+            android:text="Teleop Placed"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teleop_dropped"
+            android:text="Teleop Dropped"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+        <!--
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teleop_launch_success"
+            android:text="Teleop Launch Success"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+            -->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/teleop_launch_failure"
+            android:text="Teleop Launch Failure"
+            android:textSize="20sp"
+            android:textColor="@color/Black"/>
+    </RadioGroup>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/locations"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/Black">
+        <TableRow>
+            <TextView
+                android:text="Vault"
+                android:gravity="center"
+                android:padding="3dip"
+                android:layout_margin="3dip"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:background="@color/White"/>
+            <TextView
+                android:text="Switch"
+                android:gravity="center"
+                android:padding="3dip"
+                android:layout_margin="3dip"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:background="@color/White"/>
+            <TextView
+                android:text="Scale"
+                android:gravity="center"
+                android:padding="3dip"
+                android:layout_margin="3dip"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:background="@color/White"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="0.0s"
+                android:gravity="center"
+                android:padding="3dip"
+                android:layout_margin="3dip"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:background="@color/White"
+                android:id="@+id/vault_cycle"/>
+            <TextView
+                android:text="0.0s"
+                android:gravity="center"
+                android:padding="3dip"
+                android:layout_margin="3dip"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:background="@color/White"
+                android:id="@+id/switch_cycle"/>
+            <TextView
+                android:text="0.0s"
+                android:gravity="center"
+                android:padding="3dip"
+                android:layout_margin="3dip"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:background="@color/White"
+                android:id="@+id/scale_cycle"/>
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

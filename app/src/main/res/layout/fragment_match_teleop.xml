@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="tmd"
+            type="frc3824.rscout2018.database.data_models.TeamMatchData"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <frc3824.rscout2018.views.powered_up.SavableCubes
+            android:id="@+id/cubes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:data="@{tmd}"/>
+
+        <Button
+            android:id="@+id/undo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</layout>

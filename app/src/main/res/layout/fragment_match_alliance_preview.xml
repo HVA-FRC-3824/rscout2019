@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <include
+        layout="@layout/fragment_match_team_labels"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/Black" />
+
+    <fragment
+        android:id="@+id/team1"
+        class="frc3824.rscout2018.fragments.match_preview.MatchTeamPreviewFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/Black" />
+
+    <fragment
+        android:id="@+id/team2"
+        class="frc3824.rscout2018.fragments.match_preview.MatchTeamPreviewFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/Black" />
+
+    <fragment
+        android:id="@+id/team3"
+        class="frc3824.rscout2018.fragments.match_preview.MatchTeamPreviewFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>
+</ScrollView>

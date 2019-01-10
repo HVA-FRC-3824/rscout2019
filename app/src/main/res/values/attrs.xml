@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SavableView">
+        <attr name="label" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SavableEditText" parent="SavableView">
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SavableNumeric" parent="SavableView">
+        <attr name="number" format="string"/>
+        <attr name="min" format="integer|float"/>
+        <attr name="max" format="integer|float"/>
+    </declare-styleable>
+
+    <declare-styleable name="SavableAutoCompleteTextView" parent="SavableView">
+        <attr name="text" />
+        <attr name="options" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SavableSwitch" parent="SavableView">
+        <attr name="bool" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SavableCheckbox" parent="SavableView">
+        <attr name="bool" />
+    </declare-styleable>
+
+    <declare-styleable name="SavableCounter" parent="SavableView">
+        <attr name="count" format="integer"/>
+        <attr name="min"/>
+        <attr name="max"/>
+    </declare-styleable>
+
+    <declare-styleable name="SavableRadioButtons" parent="SavableView">
+        <attr name="radio_values" format="reference"/>
+        <attr name="selected" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="HeatMap">
+        <attr name="opacity" format="integer" />
+        <attr name="minOpacity" format="integer" />
+        <attr name="maxOpacity" format="integer" />
+        <attr name="blur" format="float" />
+        <attr name="radius" format="dimension" />
+        <attr name="dataPaddingTop" format="dimension" />
+        <attr name="dataPaddingBottom" format="dimension" />
+        <attr name="dataPaddingLeft" format="dimension" />
+        <attr name="dataPaddingRight" format="dimension" />
+        <attr name="dataPadding" format="dimension" />
+        <attr name="maxDrawingWidth" format="dimension" />
+        <attr name="maxDrawingHeight" format="dimension" />
+        <attr name="transparentBackground" format="boolean" />
+    </declare-styleable>
+</resources>

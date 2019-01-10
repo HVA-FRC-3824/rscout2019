@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name = "tpd"
+            type = "frc3824.rscout2018.database.data_models.TeamPitData" />
+    </data>
+
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                  xmlns:app = "http://schemas.android.com/apk/res-auto"
+                  android:layout_width = "match_parent"
+                  android:layout_height = "match_parent"
+                  android:orientation = "vertical">
+
+        <frc3824.rscout2018.views.SavableAutoCompleteTextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Programming Language:"
+            app:text = "@{tpd.programmingLanguage}"
+            app:textAttrChanged="@{tpd.programmingLanguageListener}"
+            app:options = "@array/programming_languages"/>
+
+        <frc3824.rscout2018.views.SavableAutoCompleteTextView
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Drive Train:"
+            app:text = "@{tpd.driveTrain}"
+            app:textAttrChanged="@{tpd.driveTrainListener}"
+            app:options = "@array/drive_trains"/>
+
+        <frc3824.rscout2018.views.SavableEditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Notes:"
+            app:text = "@{tpd.notes}"
+            app:textAttrChanged="@{tpd.notesListener}"/>
+
+    </LinearLayout>
+</layout>

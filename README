@@ -1,0 +1,55 @@
+# RScout 2018
+
+Welcome to 3824's Scouting App.
+
+## How to contribute
+
+
+### Git
+Git is a distributed version control system. Think of it as a backup system on steroids. It uses the convept of repositories, branches, and commits to keep track of the history of a collection of files.
+
+For more information about look the following:
+- http://learngitbranching.js.org/
+- https://try.github.io/levels/1/challenges/1
+- https://www.atlassian.com/git
+
+#### Git Workflow
+At this time, we are planning to use a branch/pull request workflow. There is a nice guide to the flow [here](https://guides.github.com/introduction/flow/).
+
+Short version: When implementing a new feature (e.g. Note Filter) you should create a branch off origin/dev. Once you have implemented the new feature on the branch, you should create a pull request to origin/dev. At this point, the code will enter an informal review process in which it will be tested prior to merging.
+
+Note: origin/dev and origin/master are protected and nothing should be directly changed on them.
+
+
+### Android
+
+
+## Creating a game specific version
+
+### Setup Match Scouting
+- Create any custom widgets
+- Add widgets to:
+  -  fragment_match_auto.xml
+  -  fragment_match_teleop.xml
+  -  fragment_match_endgame.xml
+
+### Setup Super Scouting
+- Create any custom widgets
+- Add widgets to:
+  - fragment_super_misc.xml
+
+### Setup Pit Scouting
+- Create any custom widgets
+- Add widgets to:
+  - fragment_pit_misc.xml
+
+### Setup Team Stats
+
+### Setup Match Preview
+
+### Setup Event Charts
+
+
+## Dependencies
+
+## License

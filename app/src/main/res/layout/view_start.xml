@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/start_location_label"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="Starting Location"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <frc3824.rscout2018.views.powered_up.StartLocationView
+        android:id="@+id/start_location_heatmap"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_location_label"
+        app:maxOpacity="255"
+        app:minOpacity="0"
+        app:radius="300dp"/>
+
+    <TextView
+        android:id="@+id/start_with_cube_label"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Started with Cube"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/start_location_heatmap"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/start_with_cube_pie"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        app:layout_constraintLeft_toRightOf="@id/start_location_heatmap"
+        app:layout_constraintTop_toBottomOf="@id/start_with_cube_label"/>
+
+    <TextView
+        android:id="@+id/auto_cross_label"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Auto Cross"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toRightOf="@id/start_with_cube_label"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/auto_cross_pie"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        app:layout_constraintLeft_toRightOf="@id/start_with_cube_pie"
+        app:layout_constraintTop_toBottomOf="@id/auto_cross_label"/>
+
+</android.support.constraint.ConstraintLayout>

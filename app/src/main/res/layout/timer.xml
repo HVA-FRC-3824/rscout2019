@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="Time:"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        android:textAlignment="center"/>
+
+    <frc3824.rscout2018.views.powered_up.MilliChronometer
+        android:id="@+id/chronometer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:text="Start"
+        android:textColor="@color/Black"
+        android:background="@color/Green"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:text="Stop"
+        android:textColor="@color/Black"
+        android:background="@color/Red"
+        android:visibility="gone"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:text="Reset"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        android:visibility="gone"/>
+
+</LinearLayout>

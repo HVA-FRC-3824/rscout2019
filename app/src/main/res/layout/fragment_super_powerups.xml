@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="smd"
+            type="frc3824.rscout2018.database.data_models.SuperMatchData"/>
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <frc3824.rscout2018.views.SavableCounter
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Red"
+        app:label="Force"
+        app:count="@{smd.forceRed}"
+        app:countAttrChanged="@{smd.forceRedListener}"
+        app:min="0"
+        app:max="3"/>
+
+    <frc3824.rscout2018.views.SavableCounter
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Red"
+        app:label="Levitate"
+        app:count="@{smd.levitateRed}"
+        app:countAttrChanged="@{smd.levitateRedListener}"
+        app:min="0"
+        app:max="3"/>
+
+    <frc3824.rscout2018.views.SavableCounter
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Red"
+        app:label="Boost"
+        app:count="@{smd.boostRed}"
+        app:countAttrChanged="@{smd.boostRedListener}"
+        app:min="0"
+        app:max="3"/>
+
+    <frc3824.rscout2018.views.SavableCounter
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Blue"
+        app:label="Force"
+        app:count="@{smd.forceBlue}"
+        app:countAttrChanged="@{smd.forceBlueListener}"
+        app:min="0"
+        app:max="3"/>
+
+    <frc3824.rscout2018.views.SavableCounter
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Blue"
+        app:label="Levitate"
+        app:count="@{smd.levitateBlue}"
+        app:countAttrChanged="@{smd.levitateBlueListener}"
+        app:min="0"
+        app:max="3"/>
+
+    <frc3824.rscout2018.views.SavableCounter
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/Blue"
+        app:label="Boost"
+        app:count="@{smd.boostBlue}"
+        app:countAttrChanged="@{smd.boostBlueListener}"
+        app:min="0"
+        app:max="3"/>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+	<head>
+		<title>rScout</title>
+		<style>
+			* { margin: 0; padding: 0; box-sizing: border-box; }
+			#results { list-style-type: none; margin: 0; padding: 0; height: 200px; width: 200px; overflow-y: auto; border: solid 2px;}
+			#results li { padding: 5px 10px; }
+			#results li:nth-child(odd) { background: #eee; }
+		</style>
+	</head>
+	<body>
+		<div  style="border: solid 2px;">Current event key: <p id="eventKeyBox"></p></div>
+		<form action="">
+			<input id="m" autocomplete="off" /><button>Request</button>
+		</form>
+		<ul id="results"></ul>
+	</body>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+	
+		$(function () {
+			var socket = io.connect('http://localhost:3824');
+			$('form').submit(function(){
+				var eventKey = $('#m').val();
+				$('#m').val('');
+				socket.emit('addEvent', eventKey);
+				document.getElementById("eventKeyBox").innerHTML = eventKey;
+				$('#results').append($('<li><b>' + eventKey + '</b>'));
+				$.ajax({
+					url: "https://www.thebluealliance.com/api/v3/event/" + eventKey + "/teams/simple",
+					type: 'GET',
+					dataType: 'json',
+					headers: {
+						'X-TBA-Auth-Key': 'jFZAiivEncdZC24mwCGqWnImGrGJdwVRBP9m0djqwY25I42B1NpocGJikWZSu0CZ'
+					},
+					contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+					success: function (result) {
+						for(var i = 0; i < result.length; i++) {
+							//$('#results').append('<li><b>Nickname:</b> ' + result[i].nickname);
+							//$('#results').append('<li><b>Team Number:</b> ' + result[i].team_number);
+							//$('#results').append('<li><b>City:</b> ' + result[i].city);
+							//$('#results').append('<li><b>State/Province:</b> ' + result[i].state_prov);
+							//$('#results').append('<li>------------------------------');
+							socket.emit('addTeam', result[i], eventKey);
+						}
+					},
+					error: function (error) {
+						alert(error);
+					}
+				});
+				$.ajax({
+					url: "https://www.thebluealliance.com/api/v3/event/" + eventKey + "/matches/simple",
+					type: 'GET',
+					dataType: 'json',
+					headers: {
+						'X-TBA-Auth-Key': 'jFZAiivEncdZC24mwCGqWnImGrGJdwVRBP9m0djqwY25I42B1NpocGJikWZSu0CZ'
+					},
+					contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+					success: function (result) {
+						for(var i = 0; i < result.length; i++) {
+							$('#results').append('<li><b>Match Key:</b> ' + result[i].key.substr(eventKey.length + 1));
+							$('#results').append('<li><b>Red 1:</b> ' + result[i].alliances.red.team_keys[0].substr(3));
+							$('#results').append('<li><b>Red 2:</b> ' + result[i].alliances.red.team_keys[1].substr(3));
+							$('#results').append('<li><b>Red 3:</b> ' + result[i].alliances.red.team_keys[2].substr(3));
+							$('#results').append('<li><b>Blue 1:</b> ' + result[i].alliances.blue.team_keys[0].substr(3));
+							$('#results').append('<li><b>Blue 2:</b> ' + result[i].alliances.blue.team_keys[1].substr(3));
+							$('#results').append('<li><b>Blue 3:</b> ' + result[i].alliances.blue.team_keys[2].substr(3));
+							$('#results').append('<li>------------------------------------------------------------------');
+							if (!result[i].key.substr(eventKey.length + 1).includes('f')) {
+								socket.emit('addMatch', result[i], eventKey);
+							}
+						}
+					},
+					error: function (error) {
+						alert(error);
+					}
+				});
+				return false;
+			});	
+			
+			//var heartbeat = setInterval(socket.emit('ping') ,100000);
+			
+			socket.on('requestEvent', function(eventKey, alreadyExist){
+				if (!alreadyExist) {
+					socket.emit('addEvent', eventKey);
+					document.getElementById("eventKeyBox").innerHTML = eventKey;
+					$('#results').append($('<li><b>' + eventKey + '</b>'));
+					$.ajax({
+						url: "https://www.thebluealliance.com/api/v3/event/" + eventKey + "/teams/simple",
+						type: 'GET',
+						dataType: 'json',
+						headers: {
+							'X-TBA-Auth-Key': 'jFZAiivEncdZC24mwCGqWnImGrGJdwVRBP9m0djqwY25I42B1NpocGJikWZSu0CZ'
+						},
+						contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+						success: function (result) {
+							for(var i = 0; i < result.length; i++) {
+								//$('#results').append('<li><b>Nickname:</b> ' + result[i].nickname);
+								//$('#results').append('<li><b>Team Number:</b> ' + result[i].team_number);
+								//$('#results').append('<li><b>City:</b> ' + result[i].city);
+								//$('#results').append('<li><b>State/Province:</b> ' + result[i].state_prov);
+								//$('#results').append('<li>------------------------------');
+								socket.emit('addTeam', result[i], eventKey);
+							}
+						},
+						error: function (error) {
+							alert(error);
+						}
+					});
+					$.ajax({
+						url: "https://www.thebluealliance.com/api/v3/event/" + eventKey + "/matches/simple",
+						type: 'GET',
+						dataType: 'json',
+						headers: {
+							'X-TBA-Auth-Key': 'jFZAiivEncdZC24mwCGqWnImGrGJdwVRBP9m0djqwY25I42B1NpocGJikWZSu0CZ'
+						},
+						contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+						success: function (result) {
+							for(var i = 0; i < result.length; i++) {
+								$('#results').append('<li><b>Match Key:</b> ' + result[i].key.substr(eventKey.length + 1));
+								$('#results').append('<li><b>Red 1:</b> ' + result[i].alliances.red.team_keys[0].substr(3));
+								$('#results').append('<li><b>Red 2:</b> ' + result[i].alliances.red.team_keys[1].substr(3));
+								$('#results').append('<li><b>Red 3:</b> ' + result[i].alliances.red.team_keys[2].substr(3));
+								$('#results').append('<li><b>Blue 1:</b> ' + result[i].alliances.blue.team_keys[0].substr(3));
+								$('#results').append('<li><b>Blue 2:</b> ' + result[i].alliances.blue.team_keys[1].substr(3));
+								$('#results').append('<li><b>Blue 3:</b> ' + result[i].alliances.blue.team_keys[2].substr(3));
+								$('#results').append('<li>------------------------------------------------------------------');
+								if (!result[i].key.substr(eventKey.length + 1).includes('f')) {
+									socket.emit('addMatch', result[i], eventKey);
+								}
+							}
+						},
+						error: function (error) {
+							alert(error);
+						}
+					});
+				} else {
+					alert("That event has already been added!");
+				}
+			});	
+		});
+	</script>
+</html>

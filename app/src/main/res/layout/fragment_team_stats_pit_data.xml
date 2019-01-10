@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="tpd"
+            type="frc3824.rscout2018.database.data_models.TeamPitData"
+            />
+    </data>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carousel"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                app:autoPlay="false"
+                app:disableAutoPlayOnUserInteraction="true"
+                app:fillColor="@color/Black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pageColor="@color/White"
+                app:radius="6dp"
+                app:strokeColor="@color/White"
+                app:strokeWidth="2dp"
+                />
+
+            <TextView
+                android:id="@+id/dimensions_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dimensions:"
+                android:textColor="@color/Black"
+                android:textSize="32sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carousel"/>
+
+            <TextView
+                android:id="@+id/width_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="Width (in):"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dimensions_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="@{String.valueOf(tpd.robotWidth)}"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/width_label"
+                app:layout_constraintTop_toTopOf="@id/width_label"
+                />
+
+            <TextView
+                android:id="@+id/length_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="Length (in):"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/width_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="@{String.valueOf(tpd.robotLength)}"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/length_label"
+                app:layout_constraintTop_toTopOf="@id/length_label"
+                />
+
+            <TextView
+                android:id="@+id/height_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="Height (in):"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/length_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="@{String.valueOf(tpd.robotHeight)}"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/height_label"
+                app:layout_constraintTop_toTopOf="@id/height_label"
+                />
+
+            <TextView
+                android:id="@+id/weight_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="Weight (lbs):"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/height_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="@{String.valueOf(tpd.robotWeight)}"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/weight_label"
+                app:layout_constraintTop_toTopOf="@id/weight_label"
+                />
+
+            <TextView
+                android:id="@+id/misc_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Misc:"
+                android:textColor="@color/Black"
+                android:textSize="32sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weight_label"/>
+
+            <TextView
+                android:id="@+id/programming_language_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="Programming language:"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/misc_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="@{tpd.programmingLanguage}"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/programming_language_label"
+                app:layout_constraintTop_toTopOf="@id/programming_language_label"
+                />
+
+            <TextView
+                android:id="@+id/drive_train_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="Drive train:"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/programming_language_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="@{tpd.driveTrain}"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toRightOf="@id/drive_train_label"
+                app:layout_constraintTop_toTopOf="@id/drive_train_label"
+                />
+
+            <TextView
+                android:id="@+id/notes_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes:"
+                android:textColor="@color/Black"
+                android:textSize="32sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/drive_train_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:text="@{tpd.notes}"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notes_label"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</layout>

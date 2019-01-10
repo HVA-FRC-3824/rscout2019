@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name = "tmd"
+            type = "frc3824.rscout2018.database.data_models.TeamMatchData" />
+    </data>
+
+    <LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                  xmlns:app = "http://schemas.android.com/apk/res-auto"
+                  android:layout_width = "match_parent"
+                  android:layout_height = "match_parent"
+                  android:orientation = "vertical">
+
+        <frc3824.rscout2018.views.SavableSwitch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label = "DQ:"
+            app:bool="@{tmd.dq}"
+            app:boolAttrChanged="@{tmd.dqListener}"/>
+
+        <frc3824.rscout2018.views.SavableSwitch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label = "No Show:"
+            app:bool="@{tmd.noShow}"
+            app:boolAttrChanged="@{tmd.noShowListener}"/>
+
+        <frc3824.rscout2018.views.SavableEditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:label = "Notes:"
+            app:text = "@{tmd.notes}"
+            app:textAttrChanged="@{tmd.notesWatcher}"/>
+
+    </LinearLayout>
+</layout>

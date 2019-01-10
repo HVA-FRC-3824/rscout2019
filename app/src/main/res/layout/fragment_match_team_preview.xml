@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="team"
+            type="frc3824.rscout2018.database.data_models.MatchPreviewTeam"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.teamNumber}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="30sp"/>
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carousel"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:autoPlay="false"
+            android:layout_gravity="center"
+            app:disableAutoPlayOnUserInteraction="true"
+            app:fillColor="@color/Black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pageColor="@color/White"
+            app:radius="6dp"
+            app:strokeColor="@color/White"
+            app:strokeWidth="2dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.numMatches}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.autoCross}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.autoSwitchSuccesses + '/' + team.autoSwitchAttempts}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.autoScaleSuccesses + '/' + team.autoScaleAttempts}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.teleopExchangeSuccesses}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.teleopSwitchSuccesses + '/' + team.teleopSwitchAttempts}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.teleopScaleSuccesses + '/' + team.teleopScaleAttempts}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.averageVaultCycle}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.averageSwitchCycle}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.averageScaleCycle}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.dropAverage}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.launchFailAverage}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.foulsAverage}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{team.techFoulsAverage}"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yellow_card"
+                android:visibility="@{team.yellowCard ? View.VISIBLE : View.GONE}"
+                android:contentDescription="If the robot has a yellow card"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/red_card"
+                android:visibility="@{team.redCard ? View.VISIBLE : View.GONE}"
+                android:contentDescription="If the robot has a red card"/>
+        </LinearLayout>
+        
+        <info.hoang8f.widget.FButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_team"
+            android:text="View Team"
+            android:textColor="@color/White"
+            android:textSize="30sp"
+            app:fButtonColor="@color/Green"/>
+
+    </LinearLayout>
+</layout>
