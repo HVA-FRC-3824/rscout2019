@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "420761680232",
+    "firebase_url": "https://rscout2018.firebaseio.com",
+    "project_id": "rscout2018",
+    "storage_bucket": "rscout2018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420761680232:android:02b37baeb04d4df4",
+        "android_client_info": {
+          "package_name": "frc3824.rscout2018"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420761680232-ngp9l55jo40v0fvdr7mmt42i4pcdkd5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCusP7qt9qfLQZbjWJC8aBqVhfVtiRt2Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
