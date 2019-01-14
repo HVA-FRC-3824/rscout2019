@@ -143,18 +143,18 @@ const TeamMatchData = sequelize.define('teammatchdata', {
     scoutName: {
         type: Sequelize.STRING
     },
-    startedWithCube: {
+    /*startedWithCube: {
         type: Sequelize.BOOLEAN
-    },
+    }, TO BE CHANGED*/
     startLocationX: {
         type: Sequelize.FLOAT
     },
     startLocationY: {
         type: Sequelize.FLOAT
     },
-    crossedAutoLine: {
+    /*crossedAutoLine: {
         type: Sequelize.BOOLEAN
-    },
+    },should probably be changed to int*/
     autoCubeEvents: {
         type: Sequelize.STRING(4095)
     },
@@ -199,7 +199,7 @@ const SuperMatchData = sequelize.define('supermatchdata', {
     scoutName: {
         type: Sequelize.STRING
     },
-    forceRed: {
+    /*forceRed: {
         type: Sequelize.INTEGER
     },
     levitateRed: {
@@ -216,7 +216,7 @@ const SuperMatchData = sequelize.define('supermatchdata', {
     },
     boostBlue: {
         type: Sequelize.INTEGER
-    },
+    },marked to be deleted*/
     notes: {
         type: Sequelize.STRING
     }
@@ -252,6 +252,7 @@ const TeamPitData = sequelize.define('teampitdata', {
     notes: {
         type: Sequelize.STRING
     }
+    // Should probably add more  information
 });
 
 // force: false will create the table if it doesn't already exist
@@ -424,6 +425,7 @@ app.get('/matchData', function (req, res) {
     //Pulls out team match data
     TeamMatchData.all().then(result => {
         data.teamMatchData = result;
+	//Need to remove instance of cubesBeneathThis    
         for (var i = 0; i < data.teamMatchData.length; i++) {
             data.teamMatchData[i].autoCubeEvents = JSON.parse(data.teamMatchData[i].autoCubeEvents);
             data.teamMatchData[i].teleopCubeEvents = JSON.parse(data.teamMatchData[i].teleopCubeEvents);
@@ -481,6 +483,7 @@ app.post('/updateTeamMatchData', function (req, res) {
             console.log('Already exists. Deleting row');
             TeamMatchData.destroy({where: {teamNumber: requestData.teamNumber, matchNumber: requestData.matchNumber}});
         }
+	//Remove instances of Cubes
         addMatchData(res, serverEventKey, requestData.teamNumber, requestData.matchNumber, requestData.scoutName, requestData.startedWithCube, requestData.startLocationX, requestData.startLocationY, requestData.crossedAutoLine, requestData.autoCubeEvents, requestData.teleopCubeEvents, requestData.climbTime, requestData.climbStatus, requestData.climbMethod, requestData.fouls, requestData.techFouls, requestData.yellowCard, requestData.redCard, requestData.noShow, requestData.dq, requestData.notes);
         res.sendStatus(200);
     });
@@ -505,6 +508,7 @@ app.post('/updateTeamMatchDataList', function (req, res) {
                 console.log('Already exists. Deleting row');
                 TeamMatchData.destroy({where: {teamNumber: requestData.teamNumber, matchNumber: requestData.matchNumber}});
             }
+	    // Remove Instances of Cubes
             addMatchData(res, serverEventKey, requestData.teamNumber, requestData.matchNumber, requestData.scoutName, requestData.startedWithCube, requestData.startLocationX, requestData.startLocationY, requestData.crossedAutoLine, requestData.autoCubeEvents, requestData.teleopCubeEvents, requestData.climbTime, requestData.climbStatus, requestData.climbMethod, requestData.fouls, requestData.techFouls, requestData.yellowCard, requestData.redCard, requestData.noShow, requestData.dq, requestData.notes);
         }
     });
@@ -555,6 +559,7 @@ app.post('/updateSuperMatchDataList', function (req, res) {
                 console.log('Already exists. Deleting row');
                 SuperMatchData.destroy({where: {matchNumber: requestData.matchNumber}});
             }
+	    // Remove instances of PowerUps
             addSuperMatchData(res, serverEventKey, requestData.matchNumber, requestData.scoutName, requestData.forceRed, requestData.levitateRed, requestData.boostRed, requestData.forceBlue, requestData.levitateBlue, requestData.boostBlue, requestData.notes);
         });
     }
@@ -600,6 +605,7 @@ function mysql_real_escape_string (str) {
 };
 
 //Insert Match Data
+//Remove Instances of Cubes
 function addMatchData(res, eventKey, teamNumber, matchNumber, scoutName, startedWithCube, startLocationX, startLocationY, autoCrossed, autoEvents, teleopEvents, climbTime, climbingState, climbingMethod, fouls, techFouls, yellowCard, redCard, noShow, DQ, notes) {
     if (teamNumber == null) {
         return;
@@ -630,6 +636,7 @@ function addMatchData(res, eventKey, teamNumber, matchNumber, scoutName, started
 };
 
 //Insert Super Match Data
+//Remove PowerUp instances
 function addSuperMatchData(res, eventKey, matchNumber, scoutName, forceRed, levitateRed, boostRed, forceBlue, levitateBlue, boostBlue, notes) {
     SuperMatchData.create({
         matchNumber: matchNumber,
@@ -655,6 +662,7 @@ function addPitData(res, eventKey, teamNumber, width, length, height, weight, dr
         driveTrain: driveTrain,
         programmingLanguage: programmingLanguage,
         notes: notes
+    	//Should Probably add more stuff to this
     })
 };
 
