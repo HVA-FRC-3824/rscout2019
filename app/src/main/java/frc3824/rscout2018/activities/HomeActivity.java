@@ -434,7 +434,7 @@ public class HomeActivity extends RScoutActivity implements View.OnClickListener
 
             teamMatchData.setClimbTime(1500);
             teamMatchData.setClimbStatus(Constants.MatchScouting.Climb.Status.CLIMB);
-            teamMatchData.setClimbMethod(Constants.MatchScouting.Climb.Method.CLIMB_RUNG);
+            teamMatchData.setClimbMethod(Constants.MatchScouting.Climb.Method.CLIMB_PLATFORM_LOWEST);
 
             Database.getInstance().updateTeamMatchData(teamMatchData);
 

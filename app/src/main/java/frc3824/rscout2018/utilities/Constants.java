@@ -131,25 +131,18 @@ public interface Constants
 
             interface Method
             {
-                String CLIMB_RUNG = "Climbed on rung, not supporting another robot";
-                String CLIMB_RUNG_ONE = "Climbed on rung, supporting another robot";
-                String CLIMB_RUNG_TWO = "Climbed on rung, supporting 2 other robots";
-                String CLIMB_ON_OTHER_ROBOT_RUNG = "Climbed on a rung on another robot";
-                String CLIMB_ON_OTHER_ROBOT_PLATFORM = "Climbed on platform of another robot";
-                String SUPPORT_ONE = "Supported another robot on platform";
-                String SUPPORT_TWO = "Supported 2 other robots on platform";
-                String FOUL = "Credited through foul";
-                String LEVITATE = "Credited through levitate, but not supporting other robots";
+                String CLIMB_PLATFORM_LOWEST = "Parked on the platform";
+                String CLIMB_PLATFORM_MEDIUM = "Climbed on the middle platform";
+                String CLIMB_PLATFORM_HIGHEST = "Climbed on a highest platform";
+                String CLIMB_NADA = "Did not climb on the lowest platform";
+                String FOUL = "Was given a climb due to the opposing team's foul";
+
                 String[] OPTIONS = {
-                    CLIMB_RUNG,
-                    CLIMB_RUNG_ONE,
-                    CLIMB_RUNG_TWO,
-                    CLIMB_ON_OTHER_ROBOT_RUNG,
-                    CLIMB_ON_OTHER_ROBOT_PLATFORM,
-                    SUPPORT_ONE,
-                    SUPPORT_TWO,
-                    FOUL,
-                    LEVITATE
+                        CLIMB_PLATFORM_LOWEST,
+                        CLIMB_PLATFORM_MEDIUM,
+                        CLIMB_PLATFORM_HIGHEST,
+                        CLIMB_NADA,
+                        FOUL
                 };
             }
 
