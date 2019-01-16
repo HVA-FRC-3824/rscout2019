@@ -97,18 +97,24 @@ public interface Constants
 
         interface CubeEvents
         {
-            String PICK_UP = "Picked Up";
-            String PLACED = "Placed";
+            String PICK_UP_HATCH = "Picked Up Hatch";
+            String PICK_UP_CARGO = "Picked Up Cargo";
+            String PLACED_LOW = "Placed Low";
+            String PLACED_MEDIUM = "Placed Medium";
+            String PLACED_HIGH = "Placed High";
             String DROPPED = "Dropped";
-            String LAUNCH_SUCCESS = "Launch Success";
-            String LAUNCH_FAILURE = "Launch Failure";
 
             String[] EVENT_OPTIONS = {
-                    // PICK_UP,
-                    PLACED,
+                    // PICK_UP_HATCH,
+                    // PICK_UP_CARGO,
+                    PLACED_LOW,
+                    PLACED_MEDIUM,
+                    PLACED_HIGH,
                     DROPPED,
-                    // LAUNCH_SUCCESS,
-                    LAUNCH_FAILURE
+            };
+            String[] PICK_UP_EVENT_OPTIONS = {
+                    PICK_UP_CARGO,
+                    PICK_UP_HATCH
             };
         }
 

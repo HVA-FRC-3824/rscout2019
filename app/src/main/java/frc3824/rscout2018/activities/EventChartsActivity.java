@@ -122,8 +122,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 for (CubeEvent cubeEvent : tmd.getAutoCubeEvents())
                 {
                     if (cubeEvent.getEvent()
-                                 .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED))
+                                 .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))
                     {
                         total++;
                     }
@@ -132,8 +133,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 for (CubeEvent cubeEvent : tmd.getTeleopCubeEvents())
                 {
                     if (cubeEvent.getEvent()
-                                 .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED))
+                            .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))
                     {
                         total++;
                     }
@@ -194,10 +196,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 for (CubeEvent cubeEvent : tmd.getAutoCubeEvents())
                 {
                     if ((Utilities.isSwitch(cubeEvent.getLocationX())) &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED)))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW)))
                     {
                         total++;
                     }
@@ -207,9 +208,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 {
                     if ((Utilities.isSwitch(cubeEvent.getLocationX())) &&
                             (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED)))
+                                    .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW)))
                     {
                         total++;
                     }
@@ -273,9 +274,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                             (cubeEvent.getLocationX() < 1 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD &&
                                     cubeEvent.getLocationX() > 1 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD)) &&
                             (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED)))
+                                    .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW)))
                     {
                         total++;
                     }
@@ -341,9 +342,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                             (cubeEvent.getLocationX() < 1 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD &&
                                     cubeEvent.getLocationX() > 1 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD)) &&
                             (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED)))
+                                    .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW)))
                     {
                         total++;
                     }
@@ -404,9 +405,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 {
                     if (pickup != null &&
                             (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED)))
+                                    .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW)))
                     {
                         if(Utilities.isSwitch(cubeEvent.getLocationX()))
                         {
@@ -416,7 +417,7 @@ public class EventChartsActivity extends EventChartsActivityBase
                         }
                         pickup = null;
                     }
-                    else if(pickup == null && cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP))
+                    else if(pickup == null && (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP_HATCH) || cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP_CARGO)))
                     {
                         pickup = cubeEvent;
                     }
@@ -476,10 +477,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 {
                     if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.SWITCH_THRESHOlD &&
                             cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD) &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED))))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))))
                     {
                         total++;
                     }
@@ -489,10 +489,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 {
                     if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.SWITCH_THRESHOlD &&
                             cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD) &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED))))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))))
                     {
                         total++;
                     }
@@ -553,10 +552,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 {
                     if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.SWITCH_THRESHOlD &&
                             cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD) &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED))))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))))
                     {
                         total++;
                     }
@@ -619,10 +617,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 {
                     if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.SWITCH_THRESHOlD &&
                             cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD) &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED))))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))))
                     {
                         total++;
                     }
@@ -682,10 +679,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 for (CubeEvent cubeEvent : tmd.getTeleopCubeEvents())
                 {
                     if (pickup != null &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED)))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW)))
                     {
                         if(Utilities.isSwitch(cubeEvent.getLocationX()))
                         {
@@ -695,7 +691,7 @@ public class EventChartsActivity extends EventChartsActivityBase
                         }
                         pickup = null;
                     }
-                    else if(pickup == null && cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP))
+                    else if(pickup == null && (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP_HATCH) || cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP_CARGO)))
                     {
                         pickup = cubeEvent;
                     }
@@ -756,10 +752,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 {
                     if (((cubeEvent.getLocationX() < Constants.TeamStats.Cubes.EXCHANGE_THESHOLD ||
                             cubeEvent.getLocationX() > 1.0 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD) &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED))))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))))
                     {
                         total++;
                     }
@@ -819,10 +814,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 for (CubeEvent cubeEvent : tmd.getTeleopCubeEvents())
                 {
                     if (pickup != null &&
-                            (cubeEvent.getEvent()
-                                      .equals(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS) ||
-                                    cubeEvent.getEvent()
-                                             .equals(Constants.MatchScouting.CubeEvents.PLACED)))
+                            (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
+                                    cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW)))
                     {
                         if(Utilities.isExchange(cubeEvent.getLocationX()))
                         {
@@ -832,7 +826,7 @@ public class EventChartsActivity extends EventChartsActivityBase
                         }
                         pickup = null;
                     }
-                    else if(pickup == null && cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP))
+                    else if(pickup == null && (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP_HATCH) || cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PICK_UP_CARGO)))
                     {
                         pickup = cubeEvent;
                     }
@@ -891,8 +885,7 @@ public class EventChartsActivity extends EventChartsActivityBase
 
                 for(CubeEvent cubeEvent : tmd.getAutoCubeEvents())
                 {
-                    if (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.DROPPED) ||
-                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.LAUNCH_FAILURE))
+                    if (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.DROPPED))
                     {
                         total++;
                     }
@@ -900,8 +893,7 @@ public class EventChartsActivity extends EventChartsActivityBase
 
                 for (CubeEvent cubeEvent : tmd.getTeleopCubeEvents())
                 {
-                    if (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.DROPPED) ||
-                            cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.LAUNCH_FAILURE))
+                    if (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.DROPPED))
                     {
                         total++;
                     }

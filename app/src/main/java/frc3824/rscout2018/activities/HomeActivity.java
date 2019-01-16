@@ -384,13 +384,13 @@ public class HomeActivity extends RScoutActivity implements View.OnClickListener
 
             ArrayList<CubeEvent> events = new ArrayList<>();
             CubeEvent event = new CubeEvent();
-            event.setEvent(Constants.MatchScouting.CubeEvents.PICK_UP);
+            event.setEvent(Constants.MatchScouting.CubeEvents.PICK_UP_HATCH);
             event.setLocationX(0.2f);
             event.setLocationY(0.2f);
             events.add(event);
 
             event = new CubeEvent();
-            event.setEvent(Constants.MatchScouting.CubeEvents.PLACED);
+            event.setEvent(Constants.MatchScouting.CubeEvents.PLACED_HIGH);
             event.setLocationX(0.2f);
             event.setLocationY(0.8f);
             events.add(event);
@@ -402,13 +402,13 @@ public class HomeActivity extends RScoutActivity implements View.OnClickListener
             events.add(event);
 
             event = new CubeEvent();
-            event.setEvent(Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS);
+            event.setEvent(Constants.MatchScouting.CubeEvents.PLACED_LOW);
             event.setLocationX(0.5f);
             event.setLocationY(0.2f);
             events.add(event);
 
             event = new CubeEvent();
-            event.setEvent(Constants.MatchScouting.CubeEvents.LAUNCH_FAILURE);
+            event.setEvent(Constants.MatchScouting.CubeEvents.DROPPED);
             event.setLocationX(0.5f);
             event.setLocationY(0.8f);
             events.add(event);
@@ -417,14 +417,14 @@ public class HomeActivity extends RScoutActivity implements View.OnClickListener
 
             events = new ArrayList<>();
             event = new CubeEvent();
-            event.setEvent(Constants.MatchScouting.CubeEvents.PICK_UP);
+            event.setEvent(Constants.MatchScouting.CubeEvents.PICK_UP_CARGO);
             event.setTime(0);
             event.setLocationX(0.315f);
             event.setLocationY(0.735f);
             events.add(event);
 
             event = new CubeEvent();
-            event.setEvent(Constants.MatchScouting.CubeEvents.PLACED);
+            event.setEvent(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM);
             event.setTime(5000);
             event.setLocationX(0.5f);
             event.setLocationY(0.8f);

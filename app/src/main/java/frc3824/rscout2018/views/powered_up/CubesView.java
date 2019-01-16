@@ -194,24 +194,19 @@ public class CubesView extends ConstraintLayout implements RadioGroup.OnCheckedC
                 {
                     switch (cubeEvent.getEvent())
                     {
-                        case Constants.MatchScouting.CubeEvents.PICK_UP:
+                        case Constants.MatchScouting.CubeEvents.PICK_UP_CARGO:
+                        case Constants.MatchScouting.CubeEvents.PICK_UP_HATCH:
                             mAutoPickUp.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
                             break;
 
-                        case Constants.MatchScouting.CubeEvents.PLACED:
+                        case Constants.MatchScouting.CubeEvents.PLACED_HIGH:
+                        case Constants.MatchScouting.CubeEvents.PLACED_MEDIUM:
+                        case Constants.MatchScouting.CubeEvents.PLACED_LOW:
                             mAutoPlaced.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
                             break;
 
                         case Constants.MatchScouting.CubeEvents.DROPPED:
                             mAutoDropped.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
-                            break;
-
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS:
-                            //mAutoLaunchSuccess.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
-                            break;
-
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_FAILURE:
-                            mAutoLaunchFailure.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
                             break;
 
                         default:
@@ -228,21 +223,25 @@ public class CubesView extends ConstraintLayout implements RadioGroup.OnCheckedC
                 {
                     CubeEvent cubeEvent = teleopCubeEvents.get(i);
 
-                    if (i == 0 && cubeEvent.getEvent()
-                                           .equals(Constants.MatchScouting.CubeEvents.PICK_UP))
+                    if (i == 0 && (cubeEvent.getEvent()
+                                           .equals(Constants.MatchScouting.CubeEvents.PICK_UP_CARGO) || cubeEvent.getEvent()
+                            .equals(Constants.MatchScouting.CubeEvents.PICK_UP_HATCH)))
                     {
                         first = false;
                     }
                     switch (cubeEvent.getEvent())
                     {
-                        case Constants.MatchScouting.CubeEvents.PICK_UP:
+                        case Constants.MatchScouting.CubeEvents.PICK_UP_CARGO:
+                        case Constants.MatchScouting.CubeEvents.PICK_UP_HATCH:
                             mTeleopPickUp.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
                             if (pickup == null)
                             {
                                 pickup = cubeEvent;
                             }
                             break;
-                        case Constants.MatchScouting.CubeEvents.PLACED:
+                        case Constants.MatchScouting.CubeEvents.PLACED_LOW:
+                        case Constants.MatchScouting.CubeEvents.PLACED_MEDIUM:
+                        case Constants.MatchScouting.CubeEvents.PLACED_HIGH:
                             mTeleopPlaced.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
                             if (!first)
                             {
@@ -275,41 +274,6 @@ public class CubesView extends ConstraintLayout implements RadioGroup.OnCheckedC
                             break;
                         case Constants.MatchScouting.CubeEvents.DROPPED:
                             mTeleopDropped.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
-                            break;
-
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS:
-                            break;
-                            /*
-                            mTeleopLaunchSuccess.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
-                            if (!first)
-                            {
-                                distance = Math.sqrt(Math.pow(cubeEvent.getLocationX() - pickup.getLocationX(),
-                                                              2) + Math.pow(cubeEvent.getLocationY() - pickup
-                                        .getLocationY(), 2));
-                                time = cubeEvent.getTime() - pickup.getTime();
-
-                                if (distance < Constants.TeamStats.Cubes.SHORT_DISTANCE)
-                                {
-                                    vaultCycleSum += time;
-                                    vaultCycleNum++;
-                                }
-                                else if (distance < Constants.TeamStats.Cubes.MEDIUM_DISTANCE)
-                                {
-                                    switchCycleSum += time;
-                                    switchCycleNum++;
-                                }
-                                else
-                                {
-                                    scaleCycleSum += time;
-                                    scaleCycleNum++;
-                                }
-                            }
-                            pickup = null;
-                            first = false;
-                            break;
-                            */
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_FAILURE:
-                            mTeleopLaunchFailure.add(new Pair<>(cubeEvent.getLocationX(), cubeEvent.getLocationY()));
                             break;
                         default:
                             throw new AssertionError();

@@ -188,25 +188,9 @@ public class MatchTeamPreviewFragment extends Fragment implements OnClickListene
                         case Constants.MatchScouting.CubeEvents.DROPPED:
                             mPreviewTeam.incrementNumDrops();
                             break;
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_FAILURE:
-                            mPreviewTeam.incrementNumLaunchFails();
-                            if (cubeEvent.getLocationX() < Constants.TeamStats.Cubes.EXCHANGE_THESHOLD ||
-                                    cubeEvent.getLocationX() > 1.0 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD)
-                            {
-                                // exchange
-                            }
-                            else if (cubeEvent.getLocationX() < Constants.TeamStats.Cubes.SWITCH_THRESHOlD ||
-                                    cubeEvent.getLocationX() > 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD)
-                            {
-                                mPreviewTeam.incrementAutoSwitchFailures();
-                            }
-                            else
-                            {
-                                mPreviewTeam.incrementAutoScaleFailures();
-                            }
-                            break;
-                        case Constants.MatchScouting.CubeEvents.PLACED:
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS:
+                        case Constants.MatchScouting.CubeEvents.PLACED_HIGH:
+                        case Constants.MatchScouting.CubeEvents.PLACED_MEDIUM:
+                        case Constants.MatchScouting.CubeEvents.PLACED_LOW:
                             if (cubeEvent.getLocationX() < Constants.TeamStats.Cubes.EXCHANGE_THESHOLD ||
                                     cubeEvent.getLocationX() > 1.0 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD)
                             {
@@ -235,8 +219,9 @@ public class MatchTeamPreviewFragment extends Fragment implements OnClickListene
                 {
                     CubeEvent cubeEvent = teleopCubeEvents.get(i);
 
-                    if (i == 0 && cubeEvent.getEvent()
-                                           .equals(Constants.MatchScouting.CubeEvents.PICK_UP))
+                    if (i == 0 && (cubeEvent.getEvent()
+                                           .equals(Constants.MatchScouting.CubeEvents.PICK_UP_HATCH) || cubeEvent.getEvent()
+                            .equals(Constants.MatchScouting.CubeEvents.PICK_UP_CARGO)))
                     {
                         first = false;
                     }
@@ -246,25 +231,9 @@ public class MatchTeamPreviewFragment extends Fragment implements OnClickListene
                         case Constants.MatchScouting.CubeEvents.DROPPED:
                             mPreviewTeam.incrementNumDrops();
                             break;
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_FAILURE:
-                            mPreviewTeam.incrementNumLaunchFails();
-                            if (cubeEvent.getLocationX() < Constants.TeamStats.Cubes.EXCHANGE_THESHOLD ||
-                                    cubeEvent.getLocationX() > 1.0 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD)
-                            {
-                                // exchange
-                            }
-                            else if (cubeEvent.getLocationX() < Constants.TeamStats.Cubes.SWITCH_THRESHOlD ||
-                                    cubeEvent.getLocationX() > 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD)
-                            {
-                                mPreviewTeam.incrementTeleopSwitchFailures();
-                            }
-                            else
-                            {
-                                mPreviewTeam.incrementTeleopScaleFailures();
-                            }
-                            break;
-                        case Constants.MatchScouting.CubeEvents.PLACED:
-                        case Constants.MatchScouting.CubeEvents.LAUNCH_SUCCESS:
+                        case Constants.MatchScouting.CubeEvents.PLACED_HIGH:
+                        case Constants.MatchScouting.CubeEvents.PLACED_MEDIUM:
+                        case Constants.MatchScouting.CubeEvents.PLACED_LOW:
                             if (Utilities.isExchange(cubeEvent.getLocationX()))
                             {
                                 mPreviewTeam.incrementTeleopExchangeSuccesses();
@@ -306,7 +275,8 @@ public class MatchTeamPreviewFragment extends Fragment implements OnClickListene
                             pickup = null;
                             first = false;
                             break;
-                        case Constants.MatchScouting.CubeEvents.PICK_UP:
+                        case Constants.MatchScouting.CubeEvents.PICK_UP_CARGO:
+                        case Constants.MatchScouting.CubeEvents.PICK_UP_HATCH:
                             if (pickup == null)
                             {
                                 pickup = cubeEvent;
