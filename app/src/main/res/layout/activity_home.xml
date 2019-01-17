@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif"
-        android:text="RScout 2018"
+        android:text="RScout 2019"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/Navy"

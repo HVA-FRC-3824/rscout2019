@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.HomeActivity"
-            android:label="RScout2018"
+            android:label="RScout2019"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
