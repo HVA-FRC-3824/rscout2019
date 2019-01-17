@@ -140,14 +140,12 @@ public interface Constants
                 String CLIMB_PLATFORM_LOWEST = "Parked on the platform";
                 String CLIMB_PLATFORM_MEDIUM = "Climbed on the middle platform";
                 String CLIMB_PLATFORM_HIGHEST = "Climbed on a highest platform";
-                String CLIMB_NADA = "Did not climb on the lowest platform";
                 String FOUL = "Was given a climb due to the opposing team's foul";
 
                 String[] OPTIONS = {
                         CLIMB_PLATFORM_LOWEST,
                         CLIMB_PLATFORM_MEDIUM,
                         CLIMB_PLATFORM_HIGHEST,
-                        CLIMB_NADA,
                         FOUL
                 };
             }
