@@ -8,17 +8,17 @@
             name="tmd"
             type="frc3824.rscout2018.database.data_models.TeamMatchData"/>
     </data>
-
+    <!--Vertical layout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <!--Horizontal Layout-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_weight="1">
+
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/carousel"
                 android:layout_width="0dp"
@@ -30,15 +30,29 @@
                 app:pageColor="@color/White"
                 app:radius="6dp"
                 app:strokeColor="@color/White"
-                app:strokeWidth="2dp"
-                />
+                app:strokeWidth="2dp" />
 
             <frc3824.rscout2018.views.powered_up.SavableStartLocation
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:data="@{tmd}"/>
+                app:data="@{tmd}" />
+
+            <frc3824.rscout2018.views.powered_up.SavableCubes
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:data="@{tmd}"
+                android:id="@+id/cubes"/>
+
         </LinearLayout>
+        <!--<frc3824.rscout2018.views.powered_up.SavableCubes-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--app:data="@{tmd}"-->
+            <!--android:id="@+id/cubes"/>-->
+
 
         <frc3824.rscout2018.views.SavableEditText
             android:layout_width="match_parent"
