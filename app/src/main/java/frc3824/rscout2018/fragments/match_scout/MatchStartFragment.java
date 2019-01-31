@@ -27,7 +27,7 @@ import frc3824.rscout2018.views.powered_up.SavableCubes;
  */
 public class MatchStartFragment extends MatchScoutFragment implements ImageListener
 {
-    SavableCubes mCubes = null;
+//    SavableCubes mCubes = null;
     private FragmentMatchStartBinding mBinding = null;
     private CarouselView mCarouselView;
     private ArrayList<String> mPictureFilepaths;
@@ -82,6 +82,8 @@ public class MatchStartFragment extends MatchScoutFragment implements ImageListe
         }
         // todo(Andrew): error
     }
+
+
 
 ////  Testing java implementation of cubes pop up
 //    /**
