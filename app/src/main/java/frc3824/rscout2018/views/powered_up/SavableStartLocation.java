@@ -59,9 +59,14 @@ public class SavableStartLocation extends View
     {
         super.onSizeChanged(width, height, oldWidth, oldHeight);
 
-        mScreenWidth = width;
-        mScreenHeight = height;
-
+//        Desperate attempt to stop crashes
+        if(width < 0 || height < 0){
+            mScreenHeight = 1;
+            mScreenHeight =1;
+        } else {
+            mScreenWidth = width;
+            mScreenHeight = height;
+        }
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
         int position = Integer.parseInt(sharedPreferences.getString(Constants.Settings.MATCH_SCOUT_POSITION, "-1"));
         if(position < 3) // Blue

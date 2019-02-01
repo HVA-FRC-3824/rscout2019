@@ -21,7 +21,7 @@
 
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/carousel"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:autoPlay="false"
