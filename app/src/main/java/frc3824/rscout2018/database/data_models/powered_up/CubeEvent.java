@@ -3,8 +3,7 @@ package frc3824.rscout2018.database.data_models.powered_up;
 /**
  * Created by frc3824.
  */
-public class CubeEvent
-{
+public class CubeEvent {
     //region Time
     long time;
 

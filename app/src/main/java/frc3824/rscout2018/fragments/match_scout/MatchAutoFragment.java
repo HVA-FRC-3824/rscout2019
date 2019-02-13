@@ -22,6 +22,7 @@ public class MatchAutoFragment extends MatchScoutFragment
     FragmentMatchAutoBinding mBinding = null;
     SavableCubes mCubes = null;
 
+
     @Override
     protected void bind()
     {

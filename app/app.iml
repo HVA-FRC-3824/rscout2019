@@ -108,7 +108,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_app_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_app_info_output_file" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_main_apk_resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_merged_manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_split_apk_resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javac" />
@@ -138,15 +137,15 @@
     <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:gifdecoder:4.1.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.ogaclejapan.smarttablayout:utils-v13:1.6.1@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.databinding:adapters:3.3.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-annotations:28.0.0-alpha1@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.databinding:baseLibrary:3.3.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-analytics-impl:11.8.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-iid:11.8.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:glide:4.1.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-core:2.2.2@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-idling-resource:2.2.2@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.databinding:baseLibrary:3.3.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.databinding:adapters:3.3.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement-license:11.8.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:annotations:4.1.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:runtime:1.0.3@aar" level="project" />
@@ -156,7 +155,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:3.0.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment:26.1.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.databinding:library:3.3.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-database-connection:11.8.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.rebound:rebound:0.3.8@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-core:11.8.0@aar" level="project" />
@@ -185,6 +183,7 @@
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-iid-license:11.8.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:transition:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common-license:11.8.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.databinding:library:3.3.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-media-compat:26.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.9.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test:runner:0.5@aar" level="project" />

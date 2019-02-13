@@ -24,8 +24,14 @@
                 android:layout_weight="1"
                 app:bool="@{tmd.startedWithCube}"
                 app:boolAttrChanged="@{tmd.startedWithCubeListener}"
-                app:label="Started with Cube:"/>
-
+                app:label="Started with Cargo: "/>
+            <!--<frc3824.rscout2018.views.SavableSwitch-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--app:bool="@{tmd.start}"-->
+                <!--app:boolAttrChanged="@tmd.startedWithCubeListener}"-->
+                <!--app:label="Started with Hatch: "/>-->
             <frc3824.rscout2018.views.SavableSwitch
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
