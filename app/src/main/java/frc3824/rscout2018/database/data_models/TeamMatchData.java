@@ -5,6 +5,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.CompoundButton;
 
+import com.bumptech.glide.annotation.Excludes;
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 import frc3824.rscout2018.database.data_models.powered_up.CubeEvent;
 import frc3824.rscout2018.utilities.Constants;
 import frc3824.rscout2018.views.SavableCounter;
+
+import frc3824.rscout2018.database.data_models.powered_up.HatchEvent;
 
 
 /**
@@ -586,6 +589,21 @@ public class TeamMatchData extends DataModel
 
     //endregion
     //endregion
+
+    //region hatchEvent
+    ArrayList<HatchEvent> autoHatchEvents = new ArrayList<>();
+    ArrayList<HatchEvent> teleopHatchEvents = new ArrayList<>();
+
+    @Exclude
+    @Bindable
+    public ArrayList<HatchEvent> getAutoHatchEvents(){return autoHatchEvents;}
+    public void setAutoHatchEvents(ArrayList<HatchEvent> autoHatchEvents){this.autoHatchEvents= autoHatchEvents;notifyChange();}
+    @Exclude
+    @Bindable
+    public ArrayList<HatchEvent> getTeleopHatchEvents(){return teleopHatchEvents;}
+    public void setTeleopHatchEvents(ArrayList<HatchEvent> teleopHatchEvents){this.teleopHatchEvents=teleopHatchEvents;notifyChange();}
+    //endregion
+
     //region Endgame
     //region Climb Time
     long climbTime;

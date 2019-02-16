@@ -176,12 +176,12 @@ public class HomeActivity extends RScoutActivity implements View.OnClickListener
         }
 
         // Inflate the update button
-        button = findViewById(R.id.update);
-        button.setEnabled(enableAdmin);
-        if(first)
-        {
-            button.setOnClickListener(this);
-        }
+//        button = findViewById(R.id.update);
+//        button.setEnabled(enableAdmin);
+//        if(first)
+//        {
+//            button.setOnClickListener(this);
+//        }
 
         // Inflate the generate test button
         button = findViewById(R.id.generate_test_data);
