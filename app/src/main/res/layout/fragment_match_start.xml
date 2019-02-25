@@ -19,6 +19,22 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
+
+            <frc3824.rscout2018.views.SavableSwitch
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:bool="@{tmd.startedWithCube}"
+                app:boolAttrChanged="@{tmd.startedWithCubeListener}"
+                app:label="Started with Cargo: "/>
+            <frc3824.rscout2018.views.SavableSwitch
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:bool="@{tmd.startedWithHatch}"
+                app:boolAttrChanged="@{tmd.startedWithHatchListener}"
+                app:label="Started with Hatch: "/>
+
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/carousel"
                 android:layout_width="0dp"
@@ -31,7 +47,9 @@
                 app:radius="6dp"
                 app:strokeColor="@color/White"
                 app:strokeWidth="2dp"
-                />
+                >
+
+            </com.synnapps.carouselview.CarouselView>
 
             <frc3824.rscout2018.views.powered_up.SavableStartLocation
                 android:layout_width="0dp"

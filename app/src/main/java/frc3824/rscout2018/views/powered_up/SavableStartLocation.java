@@ -39,7 +39,7 @@ public class SavableStartLocation extends View
         mCanvasPaint = new Paint(Paint.DITHER_FLAG);
         mPointPaint = new Paint();
         mPointPaint.setStyle(Paint.Style.STROKE);
-        mPointPaint.setColor(getResources().getColor(R.color.LightGreen));
+        mPointPaint.setColor(getResources().getColor(R.color.Purple));
         mPointPaint.setStrokeWidth(25);
     }
 

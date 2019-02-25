@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent"
-                                             android:background="@color/ColumbiaBlue"
-                                             tools:context="frc3824.rscout2018.activities.HomeActivity">
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColumbiaBlue"
+    tools:context="frc3824.rscout2018.activities.HomeActivity">
+
+    <!--<TextView-->
+        <!--android:id="@+id/event2"-->
+        <!--android:layout_width="584dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Event"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="20sp"-->
+        <!--app:layout_constraintLeft_toRightOf="@id/logo"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/version" />-->
+    <!-- Keep this commented whoever coded it is a dumbass @knox-->
 
     <ImageView
         android:id="@+id/logo"
@@ -47,13 +60,20 @@
         android:id="@+id/event"
         android:layout_width="584dp"
         android:layout_height="wrap_content"
-        android:text="Event"
+        android:text=""
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintLeft_toRightOf="@id/logo"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/version"/>
-
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="620dp"
+        android:layout_height="wrap_content"
+        android:text="Developed by Knox Crichton, based on Rscout2018 by Busby, Abigail, and Andrew"
+        app:layout_constraintLeft_toRightOf="@id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event"/>
     <TextView
         android:id="@+id/scouting_label"
         android:layout_width="584dp"
@@ -351,20 +371,20 @@
             app:shadowEnabled="true"
             app:shadowHeight="5dp"/>
 
-        <info.hoang8f.widget.FButton
-            android:id="@+id/upload_pictures_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:text="Upload Pictures"
-            android:textColor="@color/White"
-            android:textSize="20sp"
-            app:fButtonColor="@color/Navy"
-            app:cornerRadius="5dp"
-            app:shadowColor="@color/Black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"/>
+        <!--<info.hoang8f.widget.FButton-->
+            <!--android:id="@+id/upload_pictures_button"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:text="Upload Pictures"-->
+            <!--android:textColor="@color/White"-->
+            <!--android:textSize="20sp"-->
+            <!--app:fButtonColor="@color/Navy"-->
+            <!--app:cornerRadius="5dp"-->
+            <!--app:shadowColor="@color/Black"-->
+            <!--app:shadowEnabled="true"-->
+            <!--app:shadowHeight="5dp"/>-->
 
         <info.hoang8f.widget.FButton
         android:id="@+id/pull_pit_data_button"
@@ -380,20 +400,20 @@
         app:shadowColor="@color/Black"
         app:shadowEnabled="true"
         app:shadowHeight="5dp"/>
-        <info.hoang8f.widget.FButton
-            android:id="@+id/pull_pictures_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:text="Pull Pictures"
-            android:textColor="@color/White"
-            android:textSize="20sp"
-            app:fButtonColor="@color/Navy"
-            app:cornerRadius="5dp"
-            app:shadowColor="@color/Black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"/>
+        <!--<info.hoang8f.widget.FButton-->
+            <!--android:id="@+id/pull_pictures_button"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:text="Pull Pictures"-->
+            <!--android:textColor="@color/White"-->
+            <!--android:textSize="20sp"-->
+            <!--app:fButtonColor="@color/Navy"-->
+            <!--app:cornerRadius="5dp"-->
+            <!--app:shadowColor="@color/Black"-->
+            <!--app:shadowEnabled="true"-->
+            <!--app:shadowHeight="5dp"/>-->
         <info.hoang8f.widget.FButton
             android:id="@+id/pull_match_data_button"
             android:layout_width="0dp"
@@ -431,4 +451,6 @@
             app:shadowEnabled="true"
             app:shadowHeight="5dp"/>
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

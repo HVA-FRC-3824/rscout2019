@@ -462,6 +462,38 @@ public class TeamMatchData extends DataModel
         };
     }
     //endregion
+
+    //region Knox started with hatch
+    boolean startedWithHatch;
+
+    @Exclude
+    @Bindable
+    public boolean getStartedWithHatch()
+    {
+        return startedWithHatch;
+    }
+
+    @Exclude
+    public void setStartedWithHatch(boolean startedWithHatch)
+    {
+        this.startedWithHatch = startedWithHatch;
+        notifyChange();
+    }
+
+    @Exclude
+    @Bindable
+    public CompoundButton.OnCheckedChangeListener getStartedWithHatchListener()
+    {
+        return new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                setStartedWithCube(isChecked);
+            }
+        };
+    }
+    //endregion
     //region Crossed Auto Line
     boolean crossedAutoLine;
 
