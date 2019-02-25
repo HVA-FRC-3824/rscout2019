@@ -35,7 +35,10 @@ public interface Constants
 
         String[] SUPER_SCOUTS_LIST = {
                 "Abigail Bradfield",
-                "Steven Busby"
+                "Steven Busby",
+                "Nick Broyles",
+                "Evan Bosswell",
+                "James Dyer"
         };
 
         String[] MATCH_SCOUTS_LIST = {};
@@ -93,7 +96,7 @@ public interface Constants
 
     interface MatchScouting
     {
-        String[] TABS = {"Start", "Auto", "Teleop", "Endgame", "Fouls", "Misc"};
+        String[] TABS = {"Start", "Sandstorm", "Teleop", "Endgame", "Fouls", "Misc"};
 
         interface CubeEvents
         {
@@ -141,12 +144,15 @@ public interface Constants
                 String CLIMB_PLATFORM_MEDIUM = "Climbed on the middle platform";
                 String CLIMB_PLATFORM_HIGHEST = "Climbed on a highest platform";
                 String FOUL = "Was given a climb due to the opposing team's foul";
-
+                String CARRIED = "Was lifted by another robot";
+                String CARRY = "Climbed+lifeted another robot";
                 String[] OPTIONS = {
                         CLIMB_PLATFORM_LOWEST,
                         CLIMB_PLATFORM_MEDIUM,
                         CLIMB_PLATFORM_HIGHEST,
-                        FOUL
+                        FOUL,
+                        CARRY,
+                        CARRIED
                 };
             }
 
@@ -209,7 +215,12 @@ public interface Constants
     {
 
     }
-
+    //Added by knox crichton for testing
+    interface StartedWith{
+        String HATCH_START = "Started with Hatch";
+        String CARGO_START = "Started with Cargo";
+        String EMPTY_START = "Started with nothing";
+    }
     interface PickList
     {
         interface MainDropdown
@@ -309,4 +320,5 @@ public interface Constants
             }
         }
     }
+
 }

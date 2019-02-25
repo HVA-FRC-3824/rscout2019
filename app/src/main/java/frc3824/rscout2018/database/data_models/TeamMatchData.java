@@ -489,7 +489,7 @@ public class TeamMatchData extends DataModel
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                setStartedWithCube(isChecked);
+                setStartedWithHatch(isChecked);
             }
         };
     }
