@@ -261,7 +261,7 @@ TeamPitData.sync({force: false}).then(() => {
 });
 
 //Sets event key so that we don't send it with every request
-var serverEventKey = '2018tnkn';
+var serverEventKey = '2019scmb';
 
 //Sets up JSON parsing for incoming data
 var bodyParser = require('body-parser');
@@ -667,7 +667,7 @@ function addPitData(res, eventKey, teamNumber, width, length, height, weight, dr
 };
 
 //Listen on port 3824
-var server = http.listen(3824, "0.0.0.0", function(err){
+var server = http.listen(3824, "192.168.1.111", function(err){
     if (err) {
         logger.fatal(err);
         throw err;
@@ -732,7 +732,7 @@ function addMatch(matchInfo, eventKey) {
     var red3 = matchInfo.alliances.red.team_keys[2].substr(3);
     var blue1 = matchInfo.alliances.blue.team_keys[0].substr(3);
     var blue2 = matchInfo.alliances.blue.team_keys[1].substr(3);
-    prevar blue3 = matchInfo.alliances.blue.team_keys[2].substr(3);
+    var blue3 = matchInfo.alliances.blue.team_keys[2].substr(3);
 
     Match.create({
         matchNumber: matchNumber,

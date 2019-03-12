@@ -180,6 +180,10 @@ public interface Constants
 
             double EXCHANGE_THESHOLD = 0.10;
             double SWITCH_THRESHOlD = 0.35;
+
+            //Regin Deep Space
+            double ROCKET_THRESHOLD = 0.10;
+            double CS_THRESHOLD = 0.35;
         }
 
         interface Climb
@@ -215,12 +219,12 @@ public interface Constants
     {
 
     }
-    //Added by knox crichton for testing
-    interface StartedWith{
-        String HATCH_START = "Started with Hatch";
-        String CARGO_START = "Started with Cargo";
-        String EMPTY_START = "Started with nothing";
-    }
+//    //Added by knox crichton for testing
+//    interface StartedWith{
+//        String HATCH_START = "Started with Hatch";
+//        String CARGO_START = "Started with Cargo";
+//        String EMPTY_START = "Started with nothing";
+//    }
     interface PickList
     {
         interface MainDropdown

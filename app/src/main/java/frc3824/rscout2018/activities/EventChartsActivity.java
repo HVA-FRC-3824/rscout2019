@@ -270,9 +270,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 for (CubeEvent cubeEvent : tmd.getAutoCubeEvents())
                 {
                     if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.EXCHANGE_THESHOLD &&
-                            cubeEvent.getLocationX() < Constants.TeamStats.Cubes.SWITCH_THRESHOlD) ||
+                            cubeEvent.getLocationX() < Constants.TeamStats.Cubes.CS_THRESHOLD) ||
                             (cubeEvent.getLocationX() < 1 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD &&
-                                    cubeEvent.getLocationX() > 1 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD)) &&
+                                    cubeEvent.getLocationX() > 1 - Constants.TeamStats.Cubes.CS_THRESHOLD)) &&
                             (cubeEvent.getEvent()
                                     .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
                                     cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
@@ -338,9 +338,9 @@ public class EventChartsActivity extends EventChartsActivityBase
                 for (CubeEvent cubeEvent : tmd.getTeleopCubeEvents())
                 {
                     if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.EXCHANGE_THESHOLD &&
-                            cubeEvent.getLocationX() < Constants.TeamStats.Cubes.SWITCH_THRESHOlD) ||
+                            cubeEvent.getLocationX() < Constants.TeamStats.Cubes.CS_THRESHOLD) ||
                             (cubeEvent.getLocationX() < 1 - Constants.TeamStats.Cubes.EXCHANGE_THESHOLD &&
-                                    cubeEvent.getLocationX() > 1 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD)) &&
+                                    cubeEvent.getLocationX() > 1 - Constants.TeamStats.Cubes.CS_THRESHOLD)) &&
                             (cubeEvent.getEvent()
                                     .equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
                                     cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
@@ -475,8 +475,8 @@ public class EventChartsActivity extends EventChartsActivityBase
                 int total = 0;
                 for (CubeEvent cubeEvent : tmd.getAutoCubeEvents())
                 {
-                    if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.SWITCH_THRESHOlD &&
-                            cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD) &&
+                    if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.CS_THRESHOLD &&
+                            cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.CS_THRESHOLD) &&
                             (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
                                     cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
                                     cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))))
@@ -487,8 +487,8 @@ public class EventChartsActivity extends EventChartsActivityBase
 
                 for (CubeEvent cubeEvent : tmd.getTeleopCubeEvents())
                 {
-                    if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.SWITCH_THRESHOlD &&
-                            cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.SWITCH_THRESHOlD) &&
+                    if (((cubeEvent.getLocationX() > Constants.TeamStats.Cubes.CS_THRESHOLD &&
+                            cubeEvent.getLocationX() < 1.0 - Constants.TeamStats.Cubes.CS_THRESHOLD) &&
                             (cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_HIGH) ||
                                     cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_MEDIUM) ||
                                     cubeEvent.getEvent().equals(Constants.MatchScouting.CubeEvents.PLACED_LOW))))

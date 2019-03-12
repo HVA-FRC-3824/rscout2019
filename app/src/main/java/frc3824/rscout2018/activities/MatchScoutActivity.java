@@ -67,6 +67,8 @@ public class MatchScoutActivity extends RScoutActivity
         ActivityStarter.fill(this);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        //Integer.parseInt(sharedPreferences.getString(Constants.Settings.MATCH_SCOUT_POSITION,
+        //                                                                               ""));
         int mScoutPosition = Integer.parseInt(sharedPreferences.getString(Constants.Settings.MATCH_SCOUT_POSITION, "-1"));
         if (mScoutPosition == -1)
         {
