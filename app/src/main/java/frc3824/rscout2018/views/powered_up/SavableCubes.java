@@ -189,11 +189,18 @@ public class SavableCubes extends View implements View.OnClickListener
                                 y - mPlacedLowBitmap.getHeight() / 2,
                                 mCanvasPaint);
                         break;
+
                     case Constants.MatchScouting.CubeEvents.DROPPED:
                         canvas.drawBitmap(mDroppedBitmap,
                                           x - mDroppedBitmap.getWidth() / 2,
                                           y - mDroppedBitmap.getHeight() / 2,
                                           mCanvasPaint);
+                        break;
+                    case Constants.MatchScouting.CubeEvents.PLACED_CS:
+                        canvas.drawBitmap(mPlacedLowBitmap,
+                                x - mPlacedLowBitmap.getWidth() / 2,
+                                y - mPlacedLowBitmap.getHeight() / 2,
+                                mCanvasPaint);
                         break;
                     default:
                         throw new AssertionError();

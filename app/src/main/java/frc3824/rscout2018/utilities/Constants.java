@@ -102,10 +102,11 @@ public interface Constants
         {
             String PICK_UP_HATCH = "Picked Up Hatch";
             String PICK_UP_CARGO = "Picked Up Cargo";
-            String PLACED_LOW = "Placed Low";
-            String PLACED_MEDIUM = "Placed Medium";
-            String PLACED_HIGH = "Placed High";
+            String PLACED_LOW = "Placed Low Rocket";
+            String PLACED_MEDIUM = "Placed Medium Rocket";
+            String PLACED_HIGH = "Placed High Rocket";
             String DROPPED = "Dropped";
+            String PLACED_CS = "Placed Cargo Ship";
 
             String[] EVENT_OPTIONS = {
                     // PICK_UP_HATCH,
@@ -114,6 +115,7 @@ public interface Constants
                     PLACED_MEDIUM,
                     PLACED_HIGH,
                     DROPPED,
+                    PLACED_CS,
             };
             String[] PICK_UP_EVENT_OPTIONS = {
                     PICK_UP_CARGO,
