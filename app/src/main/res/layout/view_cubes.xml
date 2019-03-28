@@ -7,15 +7,15 @@
     android:padding="32dp">
 
     <TextView
+        android:id="@+id/cubes_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cubes"
-        android:textSize="30sp"
-        android:textColor="@color/Black"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Cargo and Hatches"
         android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/cubes_label"/>
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <frc3824.rscout2018.views.powered_up.CubesInnerView
         android:layout_width="700dp"
@@ -121,30 +121,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@color/Black">
         <TableRow>
+
             <TextView
-                android:text="Vault"
+                android:layout_margin="3dip"
+                android:background="@color/White"
                 android:gravity="center"
                 android:padding="3dip"
-                android:layout_margin="3dip"
+                android:text="Cargo Ship"
                 android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:background="@color/White"/>
+                android:textSize="20sp" />
+
             <TextView
-                android:text="Switch"
+                android:layout_margin="3dip"
+                android:background="@color/White"
                 android:gravity="center"
                 android:padding="3dip"
-                android:layout_margin="3dip"
+                android:text="Rocket"
                 android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:background="@color/White"/>
-            <TextView
-                android:text="Scale"
-                android:gravity="center"
-                android:padding="3dip"
-                android:layout_margin="3dip"
-                android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:background="@color/White"/>
+                android:textSize="20sp" />
         </TableRow>
 
         <TableRow>
@@ -156,7 +150,7 @@
                 android:textColor="@color/Black"
                 android:textSize="20sp"
                 android:background="@color/White"
-                android:id="@+id/vault_cycle"/>
+                android:id="@+id/cs_cycle"/>
             <TextView
                 android:text="0.0s"
                 android:gravity="center"
@@ -165,16 +159,7 @@
                 android:textColor="@color/Black"
                 android:textSize="20sp"
                 android:background="@color/White"
-                android:id="@+id/switch_cycle"/>
-            <TextView
-                android:text="0.0s"
-                android:gravity="center"
-                android:padding="3dip"
-                android:layout_margin="3dip"
-                android:textColor="@color/Black"
-                android:textSize="20sp"
-                android:background="@color/White"
-                android:id="@+id/scale_cycle"/>
+                android:id="@+id/rocket_cycle"/>
         </TableRow>
     </TableLayout>
 

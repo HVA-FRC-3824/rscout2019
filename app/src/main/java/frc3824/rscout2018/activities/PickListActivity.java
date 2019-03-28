@@ -56,7 +56,7 @@ public class PickListActivity extends RScoutActivity implements AdapterView.OnIt
             ArrayAdapter<String> secondaryAdapter = null;
             switch (Constants.PickList.MAIN_SORTING[position])
             {
-                case Constants.PickList.POWER_CUBES:
+                case Constants.PickList.CARGO:
                     secondaryAdapter = new ArrayAdapter<>(this,
                                                           android.R.layout.simple_dropdown_item_1line,
                                                           Constants.PickList.PowerCubes.OPTIONS);

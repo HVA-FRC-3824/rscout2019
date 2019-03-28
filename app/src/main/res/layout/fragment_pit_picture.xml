@@ -4,50 +4,50 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <!--
-    <com.flurgle.camerakit.CameraView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:id="@+id/camera"
-        android:adjustViewBounds="true"
-        app:ckFacing="back"
-        app:ckFlash="off"
-        app:ckZoom="pinch"
-        app:ckJpegQuality="100"/>
-    -->
+
+    <!--<com.flurgle.camerakit.CameraView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/camera"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--app:ckFacing="back"-->
+        <!--app:ckFlash="off"-->
+        <!--app:ckZoom="pinch"-->
+        <!--app:ckJpegQuality="100"/>-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <info.hoang8f.widget.FButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/cancel"
-            android:text="Cancel"
-            android:textColor="@color/White"
-            android:textSize="20sp"
-            app:fButtonColor="@color/Red"
-            app:cornerRadius="5dp"
-            app:shadowColor="@color/Black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"/>
+        <!--<info.hoang8f.widget.FButton-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/cancel"-->
+            <!--android:text="Cancel"-->
+            <!--android:textColor="@color/White"-->
+            <!--android:textSize="20sp"-->
+            <!--app:fButtonColor="@color/Red"-->
+            <!--app:cornerRadius="5dp"-->
+            <!--app:shadowColor="@color/Black"-->
+            <!--app:shadowEnabled="true"-->
+            <!--app:shadowHeight="5dp"/>-->
 
-        <info.hoang8f.widget.FButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/take_picture"
-            android:text="Take Picture"
-            android:textColor="@color/White"
-            android:textSize="20sp"
-            app:fButtonColor="@color/Navy"
-            app:cornerRadius="5dp"
-            app:shadowColor="@color/Black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"/>
+        <!--<info.hoang8f.widget.FButton-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/take_picture"-->
+            <!--android:text="Take Picture"-->
+            <!--android:textColor="@color/White"-->
+            <!--android:textSize="20sp"-->
+            <!--app:fButtonColor="@color/Navy"-->
+            <!--app:cornerRadius="5dp"-->
+            <!--app:shadowColor="@color/Black"-->
+            <!--app:shadowEnabled="true"-->
+            <!--app:shadowHeight="5dp"/>-->
 
     </LinearLayout>
 
@@ -67,38 +67,38 @@
         app:disableAutoPlayOnUserInteraction="true"
         />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <info.hoang8f.widget.FButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/delete"
-            android:text="Delete"
-            android:textColor="@color/White"
-            android:textSize="20sp"
-            app:fButtonColor="@color/Red"
-            app:cornerRadius="5dp"
-            app:shadowColor="@color/Black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"/>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<info.hoang8f.widget.FButton-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/delete"-->
+            <!--android:text="Delete"-->
+            <!--android:textColor="@color/White"-->
+            <!--android:textSize="20sp"-->
+            <!--app:fButtonColor="@color/Red"-->
+            <!--app:cornerRadius="5dp"-->
+            <!--app:shadowColor="@color/Black"-->
+            <!--app:shadowEnabled="true"-->
+            <!--app:shadowHeight="5dp"/>-->
 
-        <info.hoang8f.widget.FButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/set_default"
-            android:text="Set Default"
-            android:textColor="@color/White"
-            android:textSize="20sp"
-            app:fButtonColor="@color/Navy"
-            app:cornerRadius="5dp"
-            app:shadowColor="@color/Black"
-            app:shadowEnabled="true"
-            app:shadowHeight="5dp"/>
-    </LinearLayout>
+        <!--<info.hoang8f.widget.FButton-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/set_default"-->
+            <!--android:text="Set Default"-->
+            <!--android:textColor="@color/White"-->
+            <!--android:textSize="20sp"-->
+            <!--app:fButtonColor="@color/Navy"-->
+            <!--app:cornerRadius="5dp"-->
+            <!--app:shadowColor="@color/Black"-->
+            <!--app:shadowEnabled="true"-->
+            <!--app:shadowHeight="5dp"/>-->
+    <!--</LinearLayout>-->
 
 
 

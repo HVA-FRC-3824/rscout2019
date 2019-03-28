@@ -57,21 +57,21 @@ public class PitPictureFragment extends PitScoutFragment implements View.OnClick
         mView = inflater.inflate(R.layout.fragment_pit_picture, container, false);
 
         // Inflate the "Set Default" button
-        mSetDefault = mView.findViewById(R.id.set_default);
-        mSetDefault.setOnClickListener(this);
+//        mSetDefault = mView.findViewById(R.id.set_default);
+//        mSetDefault.setOnClickListener(this);
 
-        // Inflate the "Take Picture" button
-        mTakePicture = mView.findViewById(R.id.take_picture);
-        mTakePicture.setOnClickListener(this);
-
-        // Inflate the "Delete" button
-        mDelete = mView.findViewById(R.id.delete);
-        mDelete.setOnClickListener(this);
-
-        // Inflate the "Cancel" button
-        mCancel = mView.findViewById(R.id.cancel);
-        mCancel.setOnClickListener(this);
-        mCancel.setVisibility(View.GONE);
+//        // Inflate the "Take Picture" button
+//        mTakePicture = mView.findViewById(R.id.take_picture);
+//        mTakePicture.setOnClickListener(this);
+//
+//        // Inflate the "Delete" button
+//        mDelete = mView.findViewById(R.id.delete);
+//        mDelete.setOnClickListener(this);
+//
+//        // Inflate the "Cancel" button
+//        mCancel = mView.findViewById(R.id.cancel);
+//        mCancel.setOnClickListener(this);
+//        mCancel.setVisibility(View.GONE);
 
         // Inflate the Camera view
         //mCameraView = mView.findViewById(R.id.camera);
@@ -116,8 +116,8 @@ public class PitPictureFragment extends PitScoutFragment implements View.OnClick
         else
         {
             mCarouselView.setVisibility(View.GONE);
-            mSetDefault.setVisibility(View.GONE);
-            mDelete.setVisibility(View.GONE);
+//            mSetDefault.setVisibility(View.GONE);
+//            mDelete.setVisibility(View.GONE);
         }
 
         //mCameraView.start();

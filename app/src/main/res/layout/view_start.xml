@@ -31,12 +31,12 @@
         android:id="@+id/start_with_cube_label"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Started with Cube"
+        android:text="Starting Item"
         android:textAlignment="center"
         android:textColor="@color/Black"
         android:textSize="30sp"
         app:layout_constraintLeft_toRightOf="@id/start_location_heatmap"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/start_with_cube_pie"

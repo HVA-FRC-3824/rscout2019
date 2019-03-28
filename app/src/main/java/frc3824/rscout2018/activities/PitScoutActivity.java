@@ -415,13 +415,13 @@ public class PitScoutActivity extends RScoutActivity
             PitScoutFragment f;
             switch (position)
             {
+//                case 0:
+//                    f = new PitPictureFragment();
+//                    break;
                 case 0:
-                    f = new PitPictureFragment();
-                    break;
-                case 1:
                     f = new PitDimensionsFragment();
                     break;
-                case 2:
+                case 1:
                     f = new PitMiscFragment();
                     break;
                 default:

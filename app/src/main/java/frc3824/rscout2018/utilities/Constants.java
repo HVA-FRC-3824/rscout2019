@@ -163,7 +163,7 @@ public interface Constants
 
     interface PitScouting
     {
-        String[] TABS = {"Robot Pic", "Dimensions", "Misc"};
+        String[] TABS = {/*"Robot Pic", */"Dimensions", "Misc"};
     }
 
     interface SuperScouting
@@ -227,16 +227,22 @@ public interface Constants
 //        String CARGO_START = "Started with Cargo";
 //        String EMPTY_START = "Started with nothing";
 //    }
+
+    // Also interface for Event Charts
     interface PickList
     {
         interface MainDropdown
         {
-            String POWER_CUBES = "Power Cubes";
+            // String Cargo was refactored from POWER_CUBES, should work but untested
+            String CARGO = "Cargo";
+            String HATCH = "Hatch";
             String CLIMB = "Climb";
             String FOULS = "Fouls";
             String MISC = "Misc";
             String[] OPTIONS = {
-                    POWER_CUBES,
+
+                    CARGO,
+                    HATCH,
                     CLIMB,
                     FOULS,
                     MISC
@@ -257,8 +263,8 @@ public interface Constants
                 String AUTO_SCALE = "Auto Scale";
                 String TELEOP_SCALE = "Teleop Scale";
                 String TELEOP_SCALE_TIME = "Teleop Scale Time";
-                String EXCHANGE_STATION = "Exchange Station";
-                String EXCHANGE_STATION_TIME = "Exchange Station Time";
+//                String EXCHANGE_STATION = "Exchange Station";
+//                String EXCHANGE_STATION_TIME = "Exchange Station Time";
                 String DROP = "Drop";
                 String[] OPTIONS = {
                         ALL,
@@ -270,8 +276,8 @@ public interface Constants
                         AUTO_SCALE,
                         TELEOP_SCALE,
                         TELEOP_SCALE_TIME,
-                        EXCHANGE_STATION,
-                        EXCHANGE_STATION_TIME,
+//                        EXCHANGE_STATION,
+//                        EXCHANGE_STATION_TIME,
                         DROP,
                 };
             }

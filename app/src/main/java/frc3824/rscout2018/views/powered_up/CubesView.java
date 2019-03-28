@@ -58,10 +58,10 @@ public class CubesView extends ConstraintLayout implements RadioGroup.OnCheckedC
 
         mOption = findViewById(R.id.options);
         mOption.setOnCheckedChangeListener(this);
-
-        mVaultCycleTime = findViewById(R.id.vault_cycle);
-        mSwitchCycleTime = findViewById(R.id.switch_cycle);
-        mScaleCycleTime = findViewById(R.id.scale_cycle);
+//      Attempting to implement rocket and cs by removing vault
+//        mVaultCycleTime = findViewById(R.id.vault_cycle);
+        mSwitchCycleTime = findViewById(R.id.cs_cycle);
+        mScaleCycleTime = findViewById(R.id.rocket_cycle);
 
         if(mMatches != null)
         {
@@ -289,14 +289,14 @@ public class CubesView extends ConstraintLayout implements RadioGroup.OnCheckedC
         @Override
         protected void onProgressUpdate(Object... objects)
         {
-            if(vaultCycleNum == 0)
-            {
-                mVaultCycleTime.setText("N/A");
-            }
-            else
-            {
-                mVaultCycleTime.setText(format(Locale.US, "%.2fs", (double) vaultCycleSum / 1000.0f / (double) vaultCycleNum));
-            }
+//            if(vaultCycleNum == 0)
+//            {
+//                mVaultCycleTime.setText("N/A");
+//            }
+//            else
+//            {
+//                mVaultCycleTime.setText(format(Locale.US, "%.2fs", (double) vaultCycleSum / 1000.0f / (double) vaultCycleNum));
+//            }
 
             if(switchCycleNum == 0)
             {
