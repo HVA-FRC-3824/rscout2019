@@ -452,9 +452,21 @@ app.get('/teamMatchData', function (req, res) {
         logger.info('Sent match data');
     });
 });
+// function above but retains json
+app.get('JSONtmd', function (req, res)) {
+    logger.info('Recieved get match data request');
+    //Pulls out match data
+    TeamMatchData.all().then(result => {
+        console.log(result);
+        res.send(result);
+        logger.info('Sent match data');
+    });
+});
+}
 
 //Pulls out match data for a specified match and team
 app.get('/superMatchData', function (req, res) {
+
     logger.info('Recieved get super data request');
     //Pulls out match data
     SuperMatchData.all().then(result => {
