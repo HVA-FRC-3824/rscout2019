@@ -271,6 +271,7 @@ public class MatchListActivity extends Activity implements View.OnClickListener
                         else
                         {
                             MatchLogistics m = Database.getInstance().getMatchLogistics(position + 1);
+
                             teamNumber = m.getTeamNumber(mMatchScoutPosition);
                             mTeamNumbers.put(position + 1, teamNumber);
                         }
